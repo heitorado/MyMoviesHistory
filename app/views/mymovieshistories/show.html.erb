@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @mymovieshistory.title %>
+</p>
+
+<p>
+  <strong>Genre:</strong>
+  <%= @mymovieshistory.genre %>
+</p>
+
+<p>
+  <strong>Director:</strong>
+  <%= @mymovieshistory.director %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @mymovieshistory.year %>
+</p>
+
+<p>
+  <strong>Cast:</strong>
+  <%= @mymovieshistory.cast %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @mymovieshistory.rating %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @mymovieshistory.country %>
+</p>
+
+<%= link_to 'Edit', edit_mymovieshistory_path(@mymovieshistory) %> |
+<%= link_to 'Back', mymovieshistories_path %>

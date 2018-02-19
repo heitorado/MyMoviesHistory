@@ -1,0 +1,2 @@
+class Mymovieshistory < ApplicationRecord
+end

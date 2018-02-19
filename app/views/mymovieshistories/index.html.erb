@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mymovieshistories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Genre</th>
+      <th>Director</th>
+      <th>Year</th>
+      <th>Cast</th>
+      <th>Rating</th>
+      <th>Country</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mymovieshistories.each do |mymovieshistory| %>
+      <tr>
+        <td><%= mymovieshistory.title %></td>
+        <td><%= mymovieshistory.genre %></td>
+        <td><%= mymovieshistory.director %></td>
+        <td><%= mymovieshistory.year %></td>
+        <td><%= mymovieshistory.cast %></td>
+        <td><%= mymovieshistory.rating %></td>
+        <td><%= mymovieshistory.country %></td>
+        <td><%= link_to 'Show', mymovieshistory %></td>
+        <td><%= link_to 'Edit', edit_mymovieshistory_path(mymovieshistory) %></td>
+        <td><%= link_to 'Destroy', mymovieshistory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mymovieshistory', new_mymovieshistory_path %>

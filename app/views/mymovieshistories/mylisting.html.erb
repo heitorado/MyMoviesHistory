@@ -72,7 +72,7 @@
                 <%= link_to(image_tag(mymovieshistory.cover_image, height: '200', class: 'card-img-top'), mymovieshistory) %>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#"><%= mymovieshistory.title %></a>
+                    <%= link_to mymovieshistory.title, mymovieshistory %>
                   </h4>
                   <div id="rating">
                     <p class="card-text font-weight-bold">My Rating:</p>

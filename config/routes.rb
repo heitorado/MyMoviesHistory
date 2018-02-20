@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get '/mylist', to: 'mymovieshistories#index'
-  get '/test', to: 'mymovieshistories#mylisting'
+  get '/defaultindex', to: 'mymovieshistories#index'
+  get '/mylist', to: 'mymovieshistories#mylisting'
   
   resources :mymovieshistories
 

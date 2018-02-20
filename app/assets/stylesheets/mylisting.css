@@ -25,3 +25,17 @@ a:visited {
     position: absolute;
     bottom: 0;
 }
+
+#rating p{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.delete-link{
+    color: red;
+    float: right;
+}
+
+#modify a{
+    color: red;
+}

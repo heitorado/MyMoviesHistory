@@ -1,3 +1,5 @@
+<p id="notice"><%= notice %></p>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,14 +56,39 @@
       </div>
     </nav>
 
-    <!-- Page Content -->
-    <div class="container">
-
-      <!-- Page Heading -->
+    <!-- Page Heading -->
       <h1 class="my-4">Page Heading
         <small>Secondary Text</small>
       </h1>
 
+    <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+        <% @mymovieshistories.each do |mymovieshistory| %>
+          
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+              <div class="card h-100">
+              
+                <%= link_to(image_tag(mymovieshistory.cover_image, height: '200', class: 'card-img-top'), mymovieshistory) %>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#"><%= mymovieshistory.title %></a>
+                  </h4>
+                  <div id="rating">
+                    <p class="card-text font-weight-bold">Rating:</p>
+                    <p><%= mymovieshistory.rating %>&nbsp;/&nbsp;10.0</p>
+                  </div>
+                  <div id="modify">
+                    <!--<%= link_to '<i class="fas fa-edit"></i>'.html_safe + 'Edit', edit_mymovieshistory_path(mymovieshistory) %>-->
+                    <%= link_to "<i class='fas fa-trash-alt'></i>".html_safe, mymovieshistory, method: :delete, data: { confirm: 'Are you sure?' }, class:"delete-link" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <% end %>
+      </div>
+
+      <!-- template card
       <div class="row">
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
@@ -74,7 +101,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- /.row -->
 
       <!-- Pagination

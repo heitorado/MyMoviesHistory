@@ -7,6 +7,10 @@ class MymovieshistoriesController < ApplicationController
     @mymovieshistories = Mymovieshistory.all
   end
 
+  def mylisting
+    @mymovieshistories = Mymovieshistory.all
+  end
+
   # GET /mymovieshistories/1
   # GET /mymovieshistories/1.json
   def show

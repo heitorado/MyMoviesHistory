@@ -1,5 +1,89 @@
-<h1>New Mymovieshistory</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-<%= render 'form', mymovieshistory: @mymovieshistory %>
+  <head>
 
-<%= link_to 'Back', mymovieshistories_path %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>My Listing</title>
+
+    <!-- Icons from FontAwesome and Rpg Awesome -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/nagoshiashumari/Rpg-Awesome/master/css/rpg-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="/assets/darkly.css">
+    <link rel="stylesheet" href="/assets/mylisting.css">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/"><i class="fas fa-film"></i>&nbsp;&nbsp;MMH</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item go-back">
+              <%= link_to '<i class="fas fa-fast-backward"></i>'.html_safe + ' Back to listing', mylist_url, type:"button" ,class:"nav-link btn btn-success" %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Heading -->
+    <div id="space-filler" style="height: 6rem;"></div>
+
+    <!-- Page Content -->
+    <div class="container">
+       <div class="row">
+
+        <div class="col-lg-3 col-sm-5"></div>
+        
+        <div class="col-lg col-sm">
+          <div class="card mb-3">
+            <h3 class="card-header">Add new movie</h3>
+
+            <!--render card with form fields-->
+            <%= render 'form', mymovieshistory: @mymovieshistory %>
+
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-5"></div>
+
+       </div>
+    </div>
+      
+
+    <!-- just for padding adjustment -->
+    <div id="space-filler" style="height: 3rem;"></div>
+
+    <!-- Footer -->
+    <footer class="py-3 bg-secondary fixed-bottom">
+      <div class="container">
+        <p class="m-0 text-center text-white">Made by:&nbsp;<a target="_blank" href="https://github.com/Heitorado/">Heitorado</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.min.js"</script>
+    <script src="/assets/dynamicCover.js"></script>
+  </body>
+
+</html>

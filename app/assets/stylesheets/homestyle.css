@@ -1,0 +1,46 @@
+a:hover{
+    background-color: transparent;
+}
+
+.navbar-brand{
+    font-size: 28px;
+    margin: 0;
+    padding: 0;
+    
+}
+
+/*this makes sure that the logo and "Tavola." are always centered*/
+.center-content{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+.main-logo{
+    font-size: 200px;
+    padding: 0;
+    margin: 0;
+}
+
+.main-title{
+    font-size: 72px;
+    margin-top: 1rem !important;
+}
+
+.source{
+    font-size: 14px;
+}
+
+a:visited {
+    color:inherit;
+}

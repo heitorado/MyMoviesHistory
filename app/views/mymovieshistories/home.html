@@ -8,28 +8,35 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Bare - Start Bootstrap Template</title>
+    <title>MMH</title>
+
+    <!-- Icons from FontAwesome and Rpg Awesome -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/nagoshiashumari/Rpg-Awesome/master/css/rpg-awesome.min.css">
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="assets/darkly.css">
+    <link rel="stylesheet" href="assets/homestyle.css">
+    
 
   </head>
 
   <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><i class="fas fa-film"></i>&nbsp;&nbsp;My Movies History</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+            <!--
+            <li class="nav-item">
               <a class="nav-link" href="#">Home
                 <span class="sr-only">(current)</span>
               </a>
@@ -39,9 +46,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+            </li> -->
+            <li class="nav-item source">
+              <a class="nav-link" href="#"><i class="fab fa-github-alt"></i>&nbsp;Source Code</a>
             </li>
           </ul>
         </div>
@@ -49,18 +56,35 @@
     </nav>
 
     <!-- Page Content -->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h1 class="mt-5">A Bootstrap 4 Starter Template</h1>
-          <p class="lead">Complete with pre-defined file paths and responsive navigation!</p>
-          <ul class="list-unstyled">
-            <li>Bootstrap 4.0.0</li>
-            <li>jQuery 3.3.0</li>
-          </ul>
+    <div class="container h-100 main-content">
+      <div class="row h-100">
+        <div class="col-lg-12 text-center center-content">
+          <i class="fas fa-film main-logo"></i>
+          <h1 class="mt-5 main-title">MMH</h1>
+          <p class="lead">Your personal Silver Screen tracker.</p>
+          <div class="container">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md">
+                    <a href="/mylist" type="button" class="btn btn-success btn-lg btn-block">My Listing</a>  
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
+    <footer class="footer">
+        <div class="inner">
+            <ul class="list-unstyled" style="font-size: 12px;">
+                <li>Rails 5.1.5</li>
+                <li>Bootstrap 4.0.0</li>
+                <li>jQuery 3.3.0</li>
+            </ul>
+            <p>By:&nbsp;<a target="_blank" href="https://github.com/Heitorado/">Heitorado</a></p>            
+        </div>
+    </footer>
 
     <!-- Bootstrap core JavaScript -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

@@ -44,3 +44,12 @@ a:hover{
 a:visited {
     color:inherit;
 }
+
+#cinema-upper{
+    height: 8rem;
+    background-color: black;
+}
+.footer{
+    background-color: black;
+    height: 8rem;
+}

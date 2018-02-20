@@ -1,0 +1,27 @@
+a:hover{
+    background-color: transparent;
+}
+
+a:visited {
+    color:inherit;
+}
+
+.navbar-brand{
+    font-size: 28px;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.portfolio-item{
+    padding-bottom: 20px;
+}
+
+.portfolio-item a{
+    color: #00BC8C;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+}

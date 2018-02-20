@@ -11,47 +11,97 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :cover_image %>
-    <%= form.text_area :cover_image, id: :mymovieshistory_cover_image %>
+  <div class="container">
+    <%= form.label :title, 'Movie Title' %>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <div class="input-group-text"><i class="fas fa-film"></i></div>
+        </div>
+        <%= form.text_field :title, id: :mymovieshistory_title, class: "form-control", type: "text", placeholder: 'ex.: "Fight Club" '%>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :mymovieshistory_title %>
-  </div>
+<img id="movie-cover" style="height: 200px; width: 100%; display: block;" :src="coverLink" alt="Card image">
 
-  <div class="field">
-    <%= form.label :genre %>
-    <%= form.text_field :genre, id: :mymovieshistory_genre %>
-  </div>
+<div class="card-body">
+    <div class="container">
+        <%= form.label :cover_image %>
+        <div class="img-link input-group mb-1">
+            <div class="input-group-prepend">
+            <div class="input-group-text"><i class="fas fa-link"></i></div>
+            </div>
+        
+            <%= form.text_field :cover_image, id: :mymovieshistory_cover_image, class: "form-control form-control-lg", placeholder: "Insert image URL...", "v-model": "coverLink" %>
+        </div>
+        
+        <div class="genre mb-1">
+            <%= form.label :genre %>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="far fa-newspaper"></i></div>
+                </div>
+                <%= form.text_field :genre, id: :mymovieshistory_genre, class: "form-control", type: "text", placeholder: 'ex.: "Drama"' %>
+            </div>
+        </div>
 
-  <div class="field">
-    <%= form.label :director %>
-    <%= form.text_field :director, id: :mymovieshistory_director %>
-  </div>
+        <div class="director mb-1">
+            <%= form.label :director %>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fas fa-video"></i></div>
+                </div>
+                <%= form.text_field :director, id: :mymovieshistory_director, class: "form-control", type: "text", placeholder: 'ex.: "David Fincher" ' %>
+            </div>
+        </div>
+        <div class="year mb-2">
+            <%= form.label :year %>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fas fa-clock"></i></div>
+                </div>
+                <%= form.text_field :year, id: :mymovieshistory_year, class: "form-control", type: "number", min: "1878", placeholder: 'ex.: "1999" ' %>
+            </div>
+        </div>
+        <div class="cast mb-2">
+            <%= form.label :cast %>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fas fa-users"></i></div>
+                </div>
+                <%= form.text_area :cast, id: :mymovieshistory_cast, class: "form-control", type: "text", placeholder: 'ex.: "Brad Pitt, Edward Norton" ', style: "resize: none;height: 100px;"%>
+            </div>
+        </div>
 
-  <div class="field">
-    <%= form.label :year %>
-    <%= form.text_field :year, id: :mymovieshistory_year %>
-  </div>
+        <div class="rating mb-2">
+            <%= form.label :rating %>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fas fa-star"></i></div>
+                </div>
+                <%= form.text_field :rating, id: :mymovieshistory_rating, class: "form-control", type: "number", min: "1", max: "10", placeholder: 'ex.: "8" '%>
+            </div>
+        </div>
 
-  <div class="field">
-    <%= form.label :cast %>
-    <%= form.text_area :cast, id: :mymovieshistory_cast %>
-  </div>
+        <div class="country mb-2">
+            <%= form.label :country %>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fas fa-globe"></i></div>
+                </div>
+                <%= form.text_field :country, id: :mymovieshistory_country, class: "form-control", type: "text", placeholder: 'ex.: "USA" '%>
+            </div>
+        </div>
 
-  <div class="field">
-    <%= form.label :rating %>
-    <%= form.text_field :rating, id: :mymovieshistory_rating %>
-  </div>
+        <div class="submit-button mt-4" style="text-align: center;">
+            <%= form.submit "Lights, Camera, Action!", class: "btn btn-lg btn-success" %>
+        </div>
+    </div>
+</div>
+<!--
+<div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+</div>
+-->
 
-  <div class="field">
-    <%= form.label :country %>
-    <%= form.text_field :country, id: :mymovieshistory_country %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>

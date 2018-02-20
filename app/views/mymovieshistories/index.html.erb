@@ -1,10 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Mymovieshistories</h1>
+<h1>Heitorflix</h1>
 
 <table>
   <thead>
     <tr>
+      <th>Cover Image</th>
       <th>Title</th>
       <th>Genre</th>
       <th>Director</th>
@@ -19,6 +20,7 @@
   <tbody>
     <% @mymovieshistories.each do |mymovieshistory| %>
       <tr>
+        <td><a target="_blank" href="<%= mymovieshistory.cover_image %>">[Link]</a></td>
         <td><%= mymovieshistory.title %></td>
         <td><%= mymovieshistory.genre %></td>
         <td><%= mymovieshistory.director %></td>

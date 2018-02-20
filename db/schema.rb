@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(version: 20180219031850) do
 
   create_table "mymovieshistories", force: :cascade do |t|
+    t.text "cover_image"
     t.string "title"
     t.string "genre"
     t.string "director"

@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :cover_image %>
+    <%= form.text_area :cover_image, id: :mymovieshistory_cover_image %>
+  </div>
+
+  <div class="field">
     <%= form.label :title %>
     <%= form.text_field :title, id: :mymovieshistory_title %>
   </div>

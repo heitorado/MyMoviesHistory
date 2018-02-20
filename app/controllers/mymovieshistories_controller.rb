@@ -69,6 +69,6 @@ class MymovieshistoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def mymovieshistory_params
-      params.require(:mymovieshistory).permit(:title, :genre, :director, :year, :cast, :rating, :country)
+      params.require(:mymovieshistory).permit(:cover_image, :title, :genre, :director, :year, :cast, :rating, :country)
     end
 end

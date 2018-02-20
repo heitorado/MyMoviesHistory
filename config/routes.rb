@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/mylist', to: 'mymovieshistories#index'  
+  
   resources :mymovieshistories
 
   root 'mymovieshistories#home'

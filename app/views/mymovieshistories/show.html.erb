@@ -1,44 +1,143 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>cover_image:</strong>
-  <img src="<%= @mymovieshistory.cover_image %>" height="400" width="700">
-</p>
+<!DOCTYPE html>
+<html lang="en">
 
-<p>
-  <strong>Title:</strong>
-  <%= @mymovieshistory.title %>
-</p>
+  <head>
 
-<p>
-  <strong>Genre:</strong>
-  <%= @mymovieshistory.genre %>
-</p>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <title>My Listing</title>
+    <%= favicon_link_tag '/images/favicon.ico' %>
 
-<p>
-  <strong>Director:</strong>
-  <%= @mymovieshistory.director %>
-</p>
+    <!-- Icons from FontAwesome -->
+	  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
-<p>
-  <strong>Year:</strong>
-  <%= @mymovieshistory.year %>
-</p>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-<p>
-  <strong>Cast:</strong>
-  <%= @mymovieshistory.cast %>
-</p>
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="/assets/darkly.css">
+    <link rel="stylesheet" href="/assets/mylisting.css">
 
-<p>
-  <strong>Rating:</strong>
-  <%= @mymovieshistory.rating %>
-</p>
+  </head>
 
-<p>
-  <strong>Country:</strong>
-  <%= @mymovieshistory.country %>
-</p>
+  <body>
 
-<%= link_to 'Edit', edit_mymovieshistory_path(@mymovieshistory) %> |
-<%= link_to 'Back', mylist_url %>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/"><i class="fas fa-film"></i>&nbsp;&nbsp;MMH</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item go-back">
+              <%= link_to '<i class="fas fa-fast-backward"></i>'.html_safe + ' Back to listing', mylist_url, type:"button" ,class:"nav-link btn btn-success" %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Heading -->
+    <div id="space-filler" style="height: 6rem;"></div>
+
+    <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-sm-3"></div>
+
+        <div class="col-lg col-sm" id="movie-cover-sync">
+          <div class="card mb-3">
+            <h3 class="card-header"><%= @mymovieshistory.title %></h3>
+
+            <div id="logo-img" style="background-image: url('/img-404.png'); width: 100%; background-repeat: no-repeat;">
+                <img style="height: 400px; width: 100%; display: block;" src="<%= @mymovieshistory.cover_image %>" alt="">
+            </div>
+
+            <div class="card-body">
+              <div class="container">
+  
+                <div class="genre mb-1">
+                  <p>
+                    <i class="far fa-newspaper"></i>
+                    <strong>Genre:</strong>
+                    <%= @mymovieshistory.genre %>
+                  </p>
+                </div>
+
+                <div class="director mb-1">
+                  <p>
+                    <i class="fas fa-video"></i>
+                    <strong>Director:</strong>
+                    <%= @mymovieshistory.director %>
+                  </p>
+                </div>
+
+                <div class="year mb-2">
+                  <p>
+                    <i class="fas fa-clock"></i>
+                    <strong>Year:</strong>
+                    <%= @mymovieshistory.year %>
+                  </p>
+                </div>
+
+                <div class="cast mb-2">
+                  <p>
+                    <i class="fas fa-users"></i>
+                    <strong>Cast:</strong>
+                    <%= @mymovieshistory.cast %>
+                  </p>
+                </div>
+
+                <div class="rating mb-2">
+                  <p>
+                    <i class="fas fa-star"></i>
+                    <strong>Rating:</strong>
+                    <%= @mymovieshistory.rating %>
+                  </p>
+                </div>
+
+                <div class="country mb-2">
+                   <p>
+                    <i class="fas fa-globe"></i>
+                    <strong>Country:</strong>
+                    <%= @mymovieshistory.country %>
+                  </p> 
+                </div>
+              </div>
+            </div>
+            <div class="card-body" style="font-size: 18px; text-align: right; color: yellow;">
+              <%= link_to '<i class="fas fa-pen-square"></i>'.html_safe + ' Edit', edit_mymovieshistory_path(@mymovieshistory), class: "card-link" %>
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-sm-3"></div>
+      </div>
+    </div>
+    
+    <!-- just for padding adjustment -->
+    <div id="space-filler" style="height: 3rem;"></div>
+
+    <!-- Footer -->
+    <footer class="py-3 bg-secondary fixed-bottom">
+      <div class="container">
+        <p class="m-0 text-center text-white">Made by:&nbsp;<a target="_blank" href="https://github.com/Heitorado/">Heitorado</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+
+</html>

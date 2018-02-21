@@ -39,3 +39,8 @@ a:visited {
 #modify a{
     color: red;
 }
+
+/*show styles*/
+.card-body p{
+    font-size: 18px;
+}

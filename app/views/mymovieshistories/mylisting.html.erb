@@ -76,7 +76,7 @@
                   </h4>
                   <div id="rating">
                     <p class="card-text font-weight-bold">My Rating:</p>
-                    <p><%= mymovieshistory.rating.to_s + ' / 10'%></p>
+                    <p><%= mymovieshistory.rating.to_int.to_s + ' / 10'%></p>
                   </div>
                   <div id="modify">
                     <!--<%= link_to '<i class="fas fa-edit"></i>'.html_safe + 'Edit', edit_mymovieshistory_path(mymovieshistory) %>-->

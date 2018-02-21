@@ -10,8 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     
-    <title>My Listing</title>
-    <%= favicon_link_tag '/images/favicon.ico' %>
+    <title>MMH: <%= @mymovieshistory.title + ' (' + @mymovieshistory.year + ') ' %></title>
 
     <!-- Icons from FontAwesome -->
 	  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
@@ -65,7 +64,7 @@
             <div class="card-body" id="show-detailed-card">
               <div class="container">
                 <div class="row">
-                  <div class="col-md col-sm">
+                  <div class="col-lg col-md col-sm">
                     <div class="genre mb-1">
                       <p>
                         <i class="far fa-newspaper"></i>
@@ -114,7 +113,7 @@
                       </p> 
                     </div>
                   </div>
-                  <div class="col-md col-sm">
+                  <div class="col-lg-3 col-md-5 col-sm-8">
                     <div class="card-body" id="edit-btn">
                       <%= link_to '<i class="fas fa-pen-square"></i>'.html_safe + ' Edit', edit_mymovieshistory_path(@mymovieshistory), class: "card-link" %>                  
                     </div>

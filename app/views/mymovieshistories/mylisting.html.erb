@@ -70,16 +70,22 @@
               <div class="card h-100">
               
                 <%= link_to(image_tag(mymovieshistory.cover_image, height: '200', class: 'card-img-top'), mymovieshistory) %>
-                <div class="card-body">
+                <div class="card-body" id="card-listing">
                   <h4 class="card-title">
                     <%= link_to mymovieshistory.title, mymovieshistory %>
                   </h4>
                   <div id="genre">
-                    <p class="card-text font-weight-bold">Genre:</p>
+                    <p class="card-text font-weight-bold">
+                      <i class="far fa-newspaper"></i>
+                      Genre:
+                    </p>
                     <p><%= mymovieshistory.genre %></p>
                   </div>
                   <div id="rating">
-                    <p class="card-text font-weight-bold">My Rating:</p>
+                    <p class="card-text font-weight-bold">
+                      <i class="fas fa-star"></i>
+                      My Rating:
+                    </p>
                     <p><%= mymovieshistory.rating.to_int.to_s + ' / 10'%></p>
                   </div>
                   <div id="modify">

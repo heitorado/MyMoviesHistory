@@ -45,7 +45,9 @@ a:visited {
     color: red;
 }
 
-
+#card-listing p{
+    font-size: 16px;
+}
 
 /*show styles*/
 #show-detailed-card{

@@ -34,6 +34,9 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item go-back">
+              <%= link_to '<i class="fas fa-step-backward"></i>'.html_safe + ' Back to movie details', @mymovieshistory, type:"button" ,class:"nav-link btn btn-warning mx-3" %>
+            </li>
+            <li class="nav-item go-back">
               <%= link_to '<i class="fas fa-fast-backward"></i>'.html_safe + ' Back to listing', mylist_url, type:"button" ,class:"nav-link btn btn-success" %>
             </li>
           </ul>
@@ -85,6 +88,3 @@
   </body>
 
 </html>
-
-
-<%= link_to 'Show', @mymovieshistory %>

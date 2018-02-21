@@ -88,6 +88,19 @@
                     </p>
                     <p><%= mymovieshistory.rating.to_int.to_s + ' / 10'%></p>
                   </div>
+
+                  <div id="stars">
+                    <p>
+                      <% (1..mymovieshistory.rating).each do |i| %>
+                        <i class="fas fa-star yellow-star"></i>
+                      <% end %>
+
+                      <% (1..(10-mymovieshistory.rating)).each do |i| %>
+                        <i class="fas fa-star grey-star"></i>
+                      <% end %>
+                    </p>
+                  </div>
+
                   <div id="modify">
                     <!--<%= link_to '<i class="fas fa-edit"></i>'.html_safe + 'Edit', edit_mymovieshistory_path(mymovieshistory) %>-->
                     <%= link_to "<i class='fas fa-trash-alt'></i>".html_safe, mymovieshistory, method: :delete, data: { confirm: 'Are you sure?' }, class:"delete-link" %>

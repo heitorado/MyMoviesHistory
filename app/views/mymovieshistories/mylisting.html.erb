@@ -74,6 +74,10 @@
                   <h4 class="card-title">
                     <%= link_to mymovieshistory.title, mymovieshistory %>
                   </h4>
+                  <div id="genre">
+                    <p class="card-text font-weight-bold">Genre:</p>
+                    <p><%= mymovieshistory.genre %></p>
+                  </div>
                   <div id="rating">
                     <p class="card-text font-weight-bold">My Rating:</p>
                     <p><%= mymovieshistory.rating.to_int.to_s + ' / 10'%></p>

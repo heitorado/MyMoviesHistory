@@ -59,63 +59,70 @@
             <div id="logo-img" style="background-image: url('/img-404.png'); width: 100%; background-repeat: no-repeat;">
                 <img style="height: 400px; width: 100%; display: block;" src="<%= @mymovieshistory.cover_image %>" alt="">
             </div>
-
-            <div class="card-body">
+          
+            
+            
+            <div class="card-body" id="show-detailed-card">
               <div class="container">
-  
-                <div class="genre mb-1">
-                  <p>
-                    <i class="far fa-newspaper"></i>
-                    <strong>Genre:</strong>
-                    <%= @mymovieshistory.genre %>
-                  </p>
-                </div>
+                <div class="row">
+                  <div class="col-md col-sm">
+                    <div class="genre mb-1">
+                      <p>
+                        <i class="far fa-newspaper"></i>
+                        <strong>Genre:</strong>
+                        <%= @mymovieshistory.genre %>
+                      </p>
+                    </div>
 
-                <div class="director mb-1">
-                  <p>
-                    <i class="fas fa-video"></i>
-                    <strong>Director:</strong>
-                    <%= @mymovieshistory.director %>
-                  </p>
-                </div>
+                    <div class="director mb-1">
+                      <p>
+                        <i class="fas fa-video"></i>
+                        <strong>Director:</strong>
+                        <%= @mymovieshistory.director %>
+                      </p>
+                    </div>
 
-                <div class="year mb-2">
-                  <p>
-                    <i class="fas fa-clock"></i>
-                    <strong>Year:</strong>
-                    <%= @mymovieshistory.year %>
-                  </p>
-                </div>
+                    <div class="year mb-2">
+                      <p>
+                        <i class="fas fa-clock"></i>
+                        <strong>Year:</strong>
+                        <%= @mymovieshistory.year %>
+                      </p>
+                    </div>
 
-                <div class="cast mb-2">
-                  <p>
-                    <i class="fas fa-users"></i>
-                    <strong>Cast:</strong>
-                    <%= @mymovieshistory.cast %>
-                  </p>
-                </div>
+                    <div class="cast mb-2">
+                      <p>
+                        <i class="fas fa-users"></i>
+                        <strong>Cast:</strong>
+                        <%= @mymovieshistory.cast %>
+                      </p>
+                    </div>
 
-                <div class="rating mb-2">
-                  <p>
-                    <i class="fas fa-star"></i>
-                    <strong>Rating:</strong>
-                    <%= @mymovieshistory.rating.to_int %> / 10
-                  </p>
-                </div>
+                    <div class="rating mb-2">
+                      <p>
+                        <i class="fas fa-star"></i>
+                        <strong>Rating:</strong>
+                        <%= @mymovieshistory.rating.to_int %> / 10
+                      </p>
+                    </div>
 
-                <div class="country mb-2">
-                   <p>
-                    <i class="fas fa-globe"></i>
-                    <strong>Country:</strong>
-                    <%= @mymovieshistory.country %>
-                  </p> 
+                    <div class="country mb-2">
+                      <p>
+                        <i class="fas fa-globe"></i>
+                        <strong>Country:</strong>
+                        <%= @mymovieshistory.country %>
+                      </p> 
+                    </div>
+                  </div>
+                  <div class="col-md col-sm">
+                    <div class="card-body" id="edit-btn">
+                      <%= link_to '<i class="fas fa-pen-square"></i>'.html_safe + ' Edit', edit_mymovieshistory_path(@mymovieshistory), class: "card-link" %>                  
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="card-body" style="font-size: 18px; text-align: right; color: yellow;">
-              <%= link_to '<i class="fas fa-pen-square"></i>'.html_safe + ' Edit', edit_mymovieshistory_path(@mymovieshistory), class: "card-link" %>
-              
-            </div>
+            
           </div>
         </div>
 

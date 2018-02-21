@@ -60,7 +60,7 @@ class MymovieshistoriesController < ApplicationController
   def destroy
     @mymovieshistory.destroy
     respond_to do |format|
-      format.html { redirect_to mymovieshistories_url, notice: 'Mymovieshistory was successfully destroyed.' }
+      format.html { redirect_to mylist_url, notice: 'Mymovieshistory was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

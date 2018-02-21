@@ -19,9 +19,11 @@
         </div>
         <%= form.text_field :title, id: :mymovieshistory_title, class: "form-control", type: "text", placeholder: 'ex.: "Fight Club" '%>
     </div>
-  </div>
+  </div> 
 
-<img id="movie-cover" style="height: 200px; width: 100%; display: block;" :src="coverLink" alt="Card image">
+<div id="logo-img" style="background-image: url('/img-404.png'); width: 100%; background-repeat: no-repeat;">
+    <img style="height: 200px; width: 100%; display: block;" :src="coverLink" alt="">
+</div>
 
 <div class="card-body">
     <div class="container">
@@ -31,7 +33,7 @@
             <div class="input-group-text"><i class="fas fa-link"></i></div>
             </div>
         
-            <%= form.text_field :cover_image, id: :mymovieshistory_cover_image, class: "form-control form-control-lg", placeholder: "Insert image URL...", "v-model": "coverLink" %>
+            <%= form.text_field :cover_image, id: :mymovieshistory_cover_image, class: "form-control form-control-lg", placeholder: "Insert image URL...", :"v-model" => "coverLink" %>
         </div>
         
         <div class="genre mb-1">

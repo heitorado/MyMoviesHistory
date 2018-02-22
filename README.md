@@ -41,6 +41,14 @@ You can then access the app by typing:
 `localhost:3000`
 On your favorite web browser and pressing `enter`.
 
+## Suggested/Planned Features
+- Login and auth system
+- Short comment about the movie made by the user - less than 140 chars - the comments would be arranged on the 'view' page under the movie card
+- Backgrounds/Color study
+- Automate image selection (auto search and suggest a link)
+- Suggest actor names and link with IMDB
+- Navbar with movie film theme
+
 ## About
 This app was built mostly for learning purposes, so feel free to use is as a reference or starting point for your projects. I would also love to learn new things so feel free as well to send a pull request adding some enhancements or correcting some mistakes I might've done :)
 

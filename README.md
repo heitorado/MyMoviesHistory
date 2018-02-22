@@ -29,9 +29,13 @@ Enter on the folder using
 `$ cd MyMoviesHistory`
 
 Inside the folder, run
-`$ bundle install` to install required gems, then
+`$ bundle install` to install required gems, then run
+
 `$ rails s` to start rails server on port 3000
-`$ rails db:migrate` to migrate the db created with scaffold
+
+Finally, use 
+`$ rails db:migrate` 
+to migrate the db created with scaffold
 
 You can then access the app by typing:
 `localhost:3000`
